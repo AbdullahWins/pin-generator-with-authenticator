@@ -4,6 +4,9 @@ const pinButton = document.getElementById('pin-btn');
 const pinGenField = document.getElementById('pin-gen-field');
 const calculator = document.getElementById('calculator');
 const pinInputField = document.getElementById('pin-input-field');
+const submitButton = document.getElementById('submit-btn');
+const success = document.getElementById('success');
+const failed = document.getElementById('failed');
 
 
 function generatePin () {
@@ -39,4 +42,20 @@ calculator.addEventListener('click' , function (event) {
     clickedBtn =(pinInputField.value) + (input);
     pinInputField.value = clickedBtn;
     }
+})
+
+submitButton.addEventListener('click' , function () {
+    if (pinGenField.value != '')
+    {
+        if (pinGenField.value === pinInputField.value) {
+            alert(success.innerText);
+        }
+        else {
+            alert(failed.innerText);
+        }
+    }
+    else {
+        alert('Empty Input')
+    }
+    
 })
