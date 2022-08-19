@@ -48,10 +48,12 @@ submitButton.addEventListener('click' , function () {
     if (pinGenField.value != '')
     {
         if (pinGenField.value === pinInputField.value) {
-            alert(success.innerText);
+            success.style.display = 'block';
+            failed.style.display = 'none';
         }
         else {
-            alert(failed.innerText);
+            success.style.display = 'none';
+            failed.style.display = 'block';
         }
     }
     else {
