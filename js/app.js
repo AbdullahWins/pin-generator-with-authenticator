@@ -7,6 +7,7 @@ const pinInputField = document.getElementById('pin-input-field');
 const submitButton = document.getElementById('submit-btn');
 const success = document.getElementById('success');
 const failed = document.getElementById('failed');
+const counterNumber = document.getElementById('counter');
 
 
 function generatePin () {
@@ -54,6 +55,7 @@ submitButton.addEventListener('click' , function () {
         else {
             success.style.display = 'none';
             failed.style.display = 'block';
+            counter = parseInt(counterNumber.innerText);
         }
     }
     else {
